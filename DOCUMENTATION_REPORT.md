@@ -95,11 +95,11 @@ URI: 908157891706.dkr.ecr.us-east-1.amazonaws.com/sievphor-homework2
   3. `Swarm-Worker2`: `54.90.208.206`
 - នៅលើ Manager Node:
   ```bash
-  sudo docker swarm init --advertise-addr 13.220.98.249
+  sudo docker swarm init --advertise-addr 172.31.29.236
   ```
 - នៅលើ Worker Nodes:
   ```bash
-  sudo docker swarm join --token <WORKER_JOIN_TOKEN> 13.220.98.249:2377
+  sudo docker swarm join --token <WORKER_JOIN_TOKEN> 172.31.29.236:2377
   ```
 - ផ្ទៀងផ្ទាត់ Cluster តាមរយៈ `docker node ls`៖ បង្ហាញ Manager (Leader) និង Workers ទាំងពីរក្នុងស្ថានភាព `Ready` / `Active`។
 

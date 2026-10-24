@@ -87,7 +87,7 @@ docker stop local-test && docker rm local-test
 ### Manager Node Setup (`13.220.98.249`)
 ```bash
 # Initialize Swarm on Manager EC2
-docker swarm init --advertise-addr 13.220.98.249
+docker swarm init --advertise-addr 172.31.29.236
 
 # Obtain worker join token
 docker swarm join-token worker
@@ -96,7 +96,7 @@ docker swarm join-token worker
 ### Worker 1 (`34.229.219.41`) & Worker 2 (`54.90.208.206`) Setup
 ```bash
 # Run on each Worker EC2
-docker swarm join --token <SWARM_WORKER_TOKEN> 13.220.98.249:2377
+docker swarm join --token <SWARM_WORKER_TOKEN> 172.31.29.236:2377
 ```
 
 ### Security Group Ingress Rules
