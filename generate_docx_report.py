@@ -132,7 +132,7 @@ def create_report():
         "• Jenkins ធ្វើការ Checkout Source Code និង Login ECR តាមរយៈ aws ecr get-login-password\n"
         "• Jenkins Build Docker Image ជាមួយ Platform linux/amd64 និងដាក់ Tag តាម Build Number\n"
         "• Jenkins Push Image ទៅ Private Amazon ECR (908157891706.dkr.ecr.us-east-1.amazonaws.com/sievphor-homework2)\n"
-        "• Jenkins ភ្ជាប់តាម SSH ទៅ Swarm Manager (13.220.98.249) និងដំណើរការ docker stack deploy\n"
+        "• Jenkins ភ្ជាប់តាម SSH ទៅ Swarm Manager (3.91.30.20) និងដំណើរការ docker stack deploy\n"
         "• Docker Swarm Update Replicas ទាំង ៣ ចែកគ្នានៅលើ Manager និង Workers ដោយប្រើ Rolling Update។"
     )
     add_figure_box("រូបភាពទី ១៖ ស្ថាបត្យកម្ម CI/CD Pipeline លើ AWS EC2")
@@ -168,7 +168,7 @@ def create_report():
 
     add_body_p(
         "ជំហានទី ៥៖ បង្កើត Docker Swarm Cluster លើ AWS EC2\n"
-        "បានបង្កើត EC2 Instances ចំនួន ៣ រួមមាន 1 Manager Node (13.220.98.249) និង 2 Worker Nodes (34.229.219.41, 54.90.208.206)។ "
+        "បានបង្កើត EC2 Instances ចំនួន ៣ រួមមាន 1 Manager Node (3.91.30.20) និង 2 Worker Nodes (34.229.205.236, 54.160.200.116)។ "
         "តាមរយៈពាក្យបញ្ជា 'docker node ls' បង្ហាញថាក្នាំង Nodes ទាំង ៣ ស្ថិតក្នុងស្ថានភាព Ready និង Active។"
     )
     add_figure_box("រូបភាពទី ៦៖ Docker Swarm Cluster (docker node ls បង្ហាញ Manager & 2 Workers)")
@@ -183,9 +183,9 @@ def create_report():
     add_body_p(
         "ជំហានទី ៧៖ ការចូលប្រើប្រាស់ផ្ទាល់លើ Browser (Live Verification)\n"
         "កម្មវិធីអាចចូលប្រើប្រាស់បានជាក់ស្តែងតាមរយៈ Public IP របស់គ្រប់ Nodes ទាំងអស់៖\n"
-        "• Manager: http://13.220.98.249:8898\n"
-        "• Worker 1: http://34.229.219.41:8898\n"
-        "• Worker 2: http://54.90.208.206:8898"
+        "• Manager: http://3.91.30.20:8898\n"
+        "• Worker 1: http://34.229.205.236:8898\n"
+        "• Worker 2: http://54.160.200.116:8898"
     )
     add_figure_box("រូបភាពទី ៨៖ Web Application បង្ហាញនៅលើ Web Browser តាមរយៈ Port 8898")
 
