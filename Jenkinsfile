@@ -22,7 +22,7 @@ pipeline {
         ECR_IMAGE       = "${ECR_REGISTRY}/${ECR_REPOSITORY}"
 
         // Swarm Manager EC2 Configuration
-        SWARM_MANAGER_IP = '13.220.98.249'
+        SWARM_MANAGER_IP = '3.91.30.20'
         SWARM_USER       = 'ubuntu'
         STACK_NAME       = 'homework2'
         APP_PORT         = '8898'
