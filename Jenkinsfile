@@ -153,7 +153,7 @@ pipeline {
                     sh '''
                         set -e
                         KEY_OPT="-i $SSH_KEY"
-                        if [ ! -f "$SSH_KEY" ] && [ -f "/var/jenkins_home/.ssh/id_rsa" ]; then
+                        if [ -f "/var/jenkins_home/.ssh/id_rsa" ]; then
                             KEY_OPT="-i /var/jenkins_home/.ssh/id_rsa"
                         fi
                         scp \
@@ -182,7 +182,7 @@ pipeline {
                     sh '''
                         set -e
                         KEY_OPT="-i $SSH_KEY"
-                        if [ ! -f "$SSH_KEY" ] && [ -f "/var/jenkins_home/.ssh/id_rsa" ]; then
+                        if [ -f "/var/jenkins_home/.ssh/id_rsa" ]; then
                             KEY_OPT="-i /var/jenkins_home/.ssh/id_rsa"
                         fi
                         ssh \
@@ -225,7 +225,7 @@ pipeline {
                     sh '''
                         set -e
                         KEY_OPT="-i $SSH_KEY"
-                        if [ ! -f "$SSH_KEY" ] && [ -f "/var/jenkins_home/.ssh/id_rsa" ]; then
+                        if [ -f "/var/jenkins_home/.ssh/id_rsa" ]; then
                             KEY_OPT="-i /var/jenkins_home/.ssh/id_rsa"
                         fi
                         ssh \
